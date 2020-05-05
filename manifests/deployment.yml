@@ -1,0 +1,16 @@
+apiVersion : apps/v1beta1
+kind: Deployment
+metadata:
+  name: therealalexpipelinesjavascriptdocker 
+spec:
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: therealalexpipelinesjavascriptdocker 
+    spec:
+      containers:
+        - name: therealalexpipelinesjavascriptdocker 
+          image: stormacr.azurecr.io/therealalexpipelinesjavascriptdocker
+          ports:
+          - containerPort: 8080
